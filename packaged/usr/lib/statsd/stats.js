@@ -3,15 +3,15 @@
 var dgram  = require('dgram')
   , util    = require('util')
   , net    = require('net')
-  , config = require('./lib/config')
-  , helpers = require('./lib/helpers')
+  , config = require('/usr/lib/statsd/config')
+  , helpers = require('/usr/lib/statsd/helpers')
   , fs     = require('fs')
   , events = require('events')
-  , logger = require('./lib/logger')
-  , set = require('./lib/set')
-  , pm = require('./lib/process_metrics')
-  , process_mgmt = require('./lib/process_mgmt')
-  , mgmt = require('./lib/mgmt_console');
+  , logger = require('/usr/lib/statsd/logger')
+  , set = require('/usr/lib/statsd/set')
+  , pm = require('/usr/lib/statsd/process_metrics')
+  , process_mgmt = require('/usr/lib/statsd/process_mgmt')
+  , mgmt = require('/usr/lib/statsd/mgmt_console');
 
 
 // initialize data structures with defaults for statsd stats
