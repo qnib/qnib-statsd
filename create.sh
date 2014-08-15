@@ -4,7 +4,7 @@ PKG_VERSION=$(git describe --match "[0-9]*" --abbrev=0 --tags)
 TODAY="$(date +'%Y%m%d')"
 ITER="1"
 REPO_PATH=${REPO_PATH-/tmp/}
-OLD_ITER=$(find ${REPO_PATH} -name "${PKG_NAME}-${PKG_VERSION}*"|grep ${TODAY}|awk -F"${TODAY}." '{print $2}'|awk -F\. '{print $1}'|tail -n1)
+OLD_ITER=$(find ${REPO_PATH} -name "${PKG_NAME}-${PKG_VERSION}*"|sort|grep ${TODAY}|awk -F"${TODAY}." '{print $2}'|awk -F\. '{print $1}'|tail -n1)
 echo "OLD_ITER=${OLD_ITER}"
 if [ "X${OLD_ITER}" != "X" ];then
    ITER=$(echo "${OLD_ITER}+1"|bc)
