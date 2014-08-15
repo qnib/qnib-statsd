@@ -7,7 +7,7 @@ if [ "X${CARBON_IP}" == "X" ];then
        exit 1
    fi
 fi
-cat /etc/statsd/config.js.example |sed -e "s/, graphiteHost: .*/, graphiteHost: ${CARBON_IP}/" > /etc/statsd/config.js
+cat /etc/statsd/config.js.example |sed -e "s/, graphiteHost: .*/, graphiteHost: '${CARBON_IP}'/" > /etc/statsd/config.js
 
 # start statsd
-/bin/node /usr/local/statsd/stats.js /etc/statsd/config.js
+/bin/node /usr/lib/statsd/stats.js /etc/statsd/config.js
