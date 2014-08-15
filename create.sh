@@ -10,7 +10,7 @@ if [ "X${OLD_ITER}" != "X" ];then
    ITER=$(echo "${OLD_ITER}+1"|bc)
 fi
 if [ "X${BUILD_NUMBER}" != "X" ];then
-   ITER="jb${BUILD_NUMBER}"
+   ITER="${BUILD_NUMBER}"
 fi
 ARCH="noarch"
 FILE="${PKG_NAME}-${PKG_VERSION}-${TODAY}.${ITER}.${ARCH}.rpm"
