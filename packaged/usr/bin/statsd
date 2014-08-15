@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('./../stats.js');
+require('/usr/lib/statsd//stats.js');

@@ -18,7 +18,7 @@ echo "FILE_PATH=${FILE_PATH}"
 env fpm -s dir -t rpm -a ${ARCH} -p ${FILE_PATH} -n ${PKG_NAME} -v ${PKG_VERSION} --iteration ${TODAY}.${ITER} \
     -m 'Christian Kniep <christian@qnib.org>' \
     --description 'Simple daemon for easy stats aggregation' \
-    -d nodejs \
+    --provides statsd -d nodejs \
     -C packaged/ etc usr
 ec=$(echo $?)
 echo "FPM EC: ${ec}"
