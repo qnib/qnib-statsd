@@ -25,7 +25,7 @@ cfg.section.local
 
 if [ "X$carbon_plain" != "X" ];then
    # carbon is local
-   CARBON_IP = '127.0.0.1'
+   CARBON_IP='127.0.0.1'
 else
    CARBON_IP=$(dig +short carbon.qnib)
    if [ "X${CARBON_IP}" == "X" ];then
